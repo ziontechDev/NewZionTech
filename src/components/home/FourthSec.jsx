@@ -80,7 +80,7 @@ const FourthSec = () => {
 
       <div className="relative pb-10">
         {services.map((service, index) => {
-          // Increase step size to 0.1 so the scaling effect is more visible
+          
           const targetScale = 1 - (services.length - index) * 0.1;
 
           return (

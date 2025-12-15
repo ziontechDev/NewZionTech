@@ -3,7 +3,7 @@ import { Target, Telescope, History } from 'lucide-react';
 import fixedBgImg from "../../assets/aboutUs/fixedBg.jpg"
 
 const SecondSec = () => {
-  // Data for the three boxes
+  
   const cardData = [
     {
       icon: Target,
@@ -26,8 +26,7 @@ const SecondSec = () => {
     // Section with Fixed Background Image
     <section 
       className="relative w-full min-h-[500px] py-10 px-6 flex items-center justify-center bg-fixed bg-cover bg-center bg-no-repeat"
-      // Using a placeholder image from Unsplash with a tech/city vibe. 
-      // Replace this URL with your actual background image.
+      
       style={{ backgroundImage: `url(${fixedBgImg})` }}
     >
       

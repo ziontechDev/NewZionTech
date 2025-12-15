@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import CtaBgImg from "../../assets/ctaBg.jpg"
 
 const HomeCallToAction = () => {
-  // Placeholder image - replace with your actual office meeting image
+  
   const bgImage =CtaBgImg;
 
   return (

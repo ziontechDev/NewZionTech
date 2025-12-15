@@ -5,7 +5,6 @@ import {
   Clock,
   HeartHandshake,
   Users,
-  CircleDot,
 } from "lucide-react";
 import corporateImg from "../../assets/aboutUs/office.jpg"
 
