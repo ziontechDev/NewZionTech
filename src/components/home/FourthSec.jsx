@@ -13,6 +13,7 @@ import mobileImg from "../../assets/services/mobile.jpg";
 import webImg from "../../assets/services/web.jpg";
 import ecomImg from "../../assets/services/ecom.jpg";
 import dineImg from "../../assets/services/dine.jpg";
+import { Link } from "react-router-dom";
 
 const FourthSec = () => {
   const containerRef = useRef(null);
@@ -25,6 +26,7 @@ const FourthSec = () => {
         "Streamline your entire business operation with a bespoke Enterprise Resource Planning system.",
       icon: <Server className="h-6 w-6 text-white" />,
       image: ErpImg,
+      path:'/erp'
     },
     {
       id: 2,
@@ -33,6 +35,7 @@ const FourthSec = () => {
         "Revolutionize the dining experience with our digital management suite. From QR code ordering to kitchen display systems.",
       icon: <UtensilsCrossed className="h-6 w-6 text-white" />,
       image: dineImg,
+      path:'/smart-dine'
     },
     {
       id: 3,
@@ -41,6 +44,7 @@ const FourthSec = () => {
         "Engage your customers on the go with high-performance native and cross-platform mobile apps.",
       icon: <Smartphone className="h-6 w-6 text-white" />,
       image: mobileImg,
+      path:'/mobile-app'
     },
     {
       id: 4,
@@ -49,6 +53,7 @@ const FourthSec = () => {
         "Establish a powerful online presence with our responsive web solutions. We build fast, SEO-optimized websites.",
       icon: <Globe className="h-6 w-6 text-white" />,
       image: webImg,
+      path:'/web-development'
     },
     {
       id: 5,
@@ -57,6 +62,7 @@ const FourthSec = () => {
         "Drive sales with a secure and user-friendly online store. Secure payment gateways and inventory management.",
       icon: <ShoppingCart className="h-6 w-6 text-white" />,
       image: ecomImg,
+      path:'/e-commerce-development'
     },
   ];
 
@@ -98,7 +104,7 @@ const FourthSec = () => {
   );
 };
 
-const Card = ({ i, title, description, icon, image, total, targetScale }) => {
+const Card = ({ i, title, description, icon, image, total, targetScale,path }) => {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -116,7 +122,7 @@ const Card = ({ i, title, description, icon, image, total, targetScale }) => {
   return (
     <div
       ref={container}
-      className="sticky top-12 flex h-screen items-start justify-center pt-4 mb-[-150px]"
+      className="sticky top-12 flex h-screen items-start justify-center pt-4 mb-[-130px]"
     >
       <motion.div
         style={{
@@ -147,12 +153,14 @@ const Card = ({ i, title, description, icon, image, total, targetScale }) => {
           </p>
 
           <div>
+            <Link to={path}>
             <button className="group flex items-center gap-3 rounded-full bg-linear-to-r from-pink to-secondary px-5 py-2 text-sm font-semibold text-white transition-all lg:px-6 lg:py-3 lg:text-base">
               Get started
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-secondary transition-transform group-hover:translate-x-1">
                 <ArrowRight size={14} />
               </span>
             </button>
+            </Link>
           </div>
         </div>
 

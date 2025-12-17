@@ -1,10 +1,12 @@
 import React from "react";
 import { ChevronRight, Home } from "lucide-react";
+import { Link } from "react-router-dom"; 
 
 const PageBanner = ({
   title,
-  bgImage ,
+  bgImage,
   currentPage,
+  parentLinks = []
 }) => {
   return (
     <section
@@ -22,20 +24,36 @@ const PageBanner = ({
         </h1>
 
         {/* Breadcrumb Pill */}
-        <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-6 py-2 backdrop-blur-sm transition-colors hover:bg-white/10">
-          <a
-            href="/"
+        <div className="inline-flex items-center gap-1 sm:gap-3 rounded-full border border-white/10 bg-white/5 px-3 sm:px-6 py-2 backdrop-blur-sm transition-colors hover:bg-white/10">
+          
+          {/*  Home Link */}
+          <Link
+            to="/"
             className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
           >
             <Home size={14} />
             <span>Home</span>
-          </a>
+          </Link>
 
+          {/*  Parent Links  */}
+          {parentLinks.map((link, index) => (
+            <React.Fragment key={index}>
+              <ChevronRight size={14} className="text-gray-500" />
+              <Link
+                to={link.path}
+                className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            </React.Fragment>
+          ))}
+
+          {/* 3. Current Page  */}
           <ChevronRight size={14} className="text-gray-500" />
-
           <span className="text-sm font-semibold text-blue-400">
             {currentPage || title}
           </span>
+          
         </div>
       </div>
     </section>

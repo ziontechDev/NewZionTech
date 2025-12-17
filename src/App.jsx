@@ -9,6 +9,11 @@ import Services from "./pages/Services";
 import AboutUs from "./pages/AboutUs";
 
 import ScrollToTop from "./components/ScrollToTop";
+import MobileService from "./servicesPages/MobileService";
+import WebService from "./servicesPages/WebService";
+import ErpService from "./servicesPages/ErpService";
+import EcomService from "./servicesPages/EcomService";
+import SmartDineService from "./servicesPages/SmartDineService";
 
 const App = () => {
   return (
@@ -18,10 +23,18 @@ const App = () => {
 
       <main className="min-h-screen">
         <Routes>
+          {/* main pages */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services/>}/>
           <Route path="/contact" element={<Contact />} />
+
+          {/* services pages */}
+          <Route path="/mobile-app" element={<MobileService/>}/>
+          <Route path="/web-development" element={<WebService/>}/>
+          <Route path="/erp" element={<ErpService/>}/>
+          <Route path="/e-commerce-development" element={<EcomService/>}/>
+          <Route path="/smart-dine" element={<SmartDineService/>}/>
         </Routes>
       </main>
 

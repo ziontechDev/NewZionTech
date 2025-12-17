@@ -2,81 +2,67 @@ import React from "react";
 import {
   Smartphone,
   Globe,
-  BrainCircuit,
-  Database,
-  Bot,
-  Infinity,
   Building2,
   ArrowRight,
+  ShoppingCart,
+  UtensilsCrossed
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mobileImg from "../../assets/servicesListBg/mobile.jpg";
 import webImg from "../../assets/servicesListBg/web.jpg";
-import devImg from "../../assets/servicesListBg/dev.jpg";
-import roboImg from "../../assets/servicesListBg/robo.jpg";
+import ecomImg from "../../assets/servicesListBg/ecom.jpg";
+import dineImg from "../../assets/servicesListBg/dine.jpg";
 import erpImg from "../../assets/servicesListBg/erp.jpg";
-import aiImg from "../../assets/servicesListBg/ai.jpg";
-import dataImg from "../../assets/servicesListBg/data.jpg";
+
 
 const ServicesList = () => {
   const services = [
-    {
-      id: 1,
-      title: "Mobile Applications",
-      description:
-        "Create seamless, high-performance native and cross-platform mobile experiences for iOS and Android.",
-      icon: <Smartphone strokeWidth={1.5} size={40} />,
-      image: mobileImg,
-    },
-    {
-      id: 2,
-      title: "Advanced Web Applications",
-      description:
-        "Build scalable, responsive, and secure web solutions using cutting-edge technologies like React and Next.js.",
-      icon: <Globe strokeWidth={1.5} size={40} />,
-      image: webImg,
-    },
-    {
-      id: 3,
-      title: "Artificial Intelligence",
-      description:
-        "Leverage machine learning and AI algorithms to automate processes and gain predictive insights.",
-      icon: <BrainCircuit strokeWidth={1.5} size={40} />,
-      image: aiImg,
-    },
-    {
-      id: 4,
-      title: "Big Data Analytics",
-      description:
-        "Transform raw data into actionable intelligence with robust analytics and visualization tools.",
-      icon: <Database strokeWidth={1.5} size={40} />,
-      image: dataImg,
-    },
-    {
-      id: 5,
-      title: "Robotic",
-      description:
-        "Implement RPA (Robotic Process Automation) to streamline repetitive tasks and boost efficiency.",
-      icon: <Bot strokeWidth={1.5} size={40} />,
-      image: roboImg,
-    },
-    {
-      id: 6,
-      title: "Dev Ops",
-      description:
-        "Accelerate delivery and ensure reliability with continuous integration, deployment, and infrastructure as code.",
-      icon: <Infinity strokeWidth={1.5} size={40} />,
-      image: devImg,
-    },
-    {
-      id: 7,
-      title: "Enterprise Applications",
-      description:
-        "Scalable software solutions designed to support large organizations and complex business workflows.",
-      icon: <Building2 strokeWidth={1.5} size={40} />,
-      image: erpImg,
-    },
-  ];
+  {
+    id: 1,
+    title: "Mobile Applications",
+    description:
+      "Create seamless, high-performance native and cross-platform mobile experiences for iOS and Android.",
+    icon: <Smartphone strokeWidth={1.5} size={40} />,
+    image: mobileImg,
+    path: '/mobile-app'
+  },
+  {
+    id: 2,
+    title: "Advanced Web Applications",
+    description:
+      "Build scalable, responsive, and secure web solutions using cutting-edge technologies like React and Next.js.",
+    icon: <Globe strokeWidth={1.5} size={40} />,
+    image: webImg,
+    path:'/web-development'
+  },
+  {
+    id: 3,
+    title: "Customized ERP",
+    description:
+      "Tailored Enterprise Resource Planning solutions designed to streamline your business processes, improve efficiency, and support scalable growth.",
+    icon: <Building2 strokeWidth={1.5} size={40} />,
+    image: erpImg, 
+    path:'/erp'
+  },
+  {
+    id: 4,
+    title: "E-commerce Development",
+    description:
+      "Build powerful, secure, and user-friendly online stores with custom features, seamless payment integration, and optimal performance.",
+    icon: <ShoppingCart strokeWidth={1.5} size={40} />,
+    image: ecomImg, 
+    path:'/e-commerce-development'
+  },
+  {
+    id: 5,
+    title: "Smart Dine",
+    description:
+      "Innovative restaurant management solutions featuring digital menus, online ordering, table reservations, and POS integration for a modern dining experience.",
+    icon: <UtensilsCrossed strokeWidth={1.5} size={40} />,
+    image: dineImg, 
+    path:'/smart-Dine'
+  },
+]
 
   return (
     <section className="bg-white py-12">
@@ -130,7 +116,7 @@ const ServicesList = () => {
                 {/* Read More Link */}
                 <div className="absolute bottom-0">
                   <Link
-                    to="#"
+                    to={service.path}
                     className="inline-flex items-center gap-2 font-semibold text-secondary transition-colors duration-300 group-hover:text-white"
                   >
                     Read more
