@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail, ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaXTwitter,
@@ -10,7 +11,6 @@ import {
 import companyLogo from "../../assets/logo.png";
 
 export default function Footer() {
-  
   // Function to scroll smoothly to the top
   const scrollToTop = () => {
     window.scrollTo({
@@ -23,34 +23,23 @@ export default function Footer() {
     <footer className="bg-primary text-white relative">
       <div className="mx-auto px-6 sm:px-10 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
-          {/* Left: logo + address */}
+          {/* === COLUMN 1: Logo + Description + Socials === */}
           <div>
             <img
               src={companyLogo}
               alt="Ziontech logo"
-              className="w-36 mb-4 object-contain"
+              className="w-36 mb-6 object-contain"
             />
 
-            <div className="flex items-start gap-3 text-sm text-white/90 mb-3">
-              <MapPin className="w-4 h-4 mt-1" />
-              <div>
-                <div>123 Zion Street, Business Bay</div>
-                <div>Muscat, Oman</div>
-              </div>
-            </div>
+            {/* Small Description */}
+            <p className="text-sm text-white/80 leading-relaxed mb-6">
+              Transforming businesses with cutting-edge technology solutions. We
+              are dedicated to delivering innovation and excellence in every
+              project.
+            </p>
 
-            <div className="mt-3 flex items-center gap-3 text-sm text-white/90 mb-3">
-              <Phone className="w-4 h-4" />
-              <div>+968-97892123</div>
-            </div>
-
-            <div className="mt-2 flex items-center gap-3 text-sm text-white/90 mb-3">
-              <Mail className="w-4 h-4" />
-              <div>admin@zionteck.com</div>
-            </div>
-
-            {/* Social Icons */}
-            <div className="mt-6 flex gap-3">
+            {/* Social Icons  */}
+            <div className="flex gap-3">
               <a
                 href="#"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-primary
@@ -85,48 +74,137 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* === COLUMN 2: Services === */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="text-sm space-y-3">
-              <li className="footer-link">Odoo Software</li>
-              <li className="footer-link">Artificial Intelligence</li>
-              <li className="footer-link">Mobile App Development</li>
-              <li className="footer-link">Block Chain Technologies</li>
-              <li className="footer-link">Product Development</li>
-              <li className="footer-link">Development Process</li>
-              <li className="footer-link">Advanced Web Development</li>
+              <li>
+                <Link
+                  to="/mobile-app"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Mobile Applications
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Advanced Web Applications
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/erp"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Customized ERP
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/e-commerce-development"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  E-commerce Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/smart-dine"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Smart Dine
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Technology */}
+          {/* === COLUMN 3: Useful Links  === */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Technology</h3>
+            <h3 className="text-lg font-bold mb-4">Useful Links</h3>
             <ul className="text-sm space-y-3">
-              <li className="footer-link">Asp.Net</li>
-              <li className="footer-link">Java / JEE</li>
-              <li className="footer-link">Php</li>
-              <li className="footer-link">Python</li>
-              <li className="footer-link">Node JS</li>
-              <li className="footer-link">IOS / Android</li>
-              <li className="footer-link">Angular JS</li>
+              <li>
+                <Link
+                  to="/"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/process"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Process
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blogs"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* === COLUMN 4: Reach Us  === */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="text-sm space-y-3">
-              <li className="footer-link">ZIONTECH</li>
-              <li className="footer-link">Process</li>
-              <li className="footer-link">Blog</li>
-              <li className="footer-link">Hire Us</li>
-            </ul>
+            <h3 className="text-lg font-bold mb-4">Reach Us</h3>
+
+            {/* Address */}
+            <div className="flex items-start gap-3 text-sm text-white/90 mb-4">
+              <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
+              <div className="leading-relaxed">
+                <div>#1425 Mumtaz Area, RUWI,</div>
+                <div>MUSCAT, SULTANATE OF OMAN.</div>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-center gap-3 text-sm text-white/90 mb-4">
+              <Phone className="w-4 h-4 shrink-0" />
+              <div>+968-97892123</div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center gap-3 text-sm text-white/90 mb-4">
+              <Mail className="w-4 h-4 shrink-0" />
+              <div>admin@zionteck.com</div>
+            </div>
           </div>
         </div>
 
-        {/* --- GO TOP BUTTON  --- */}
-        <button 
+        {/* --- GO TOP BUTTON --- */}
+        <button
           onClick={scrollToTop}
           className="absolute sm:bottom-30 bottom-40 right-6 md:right-10 flex items-center justify-center w-12 h-12 rounded-full bg-white text-primary shadow-lg transition-all duration-300 hover:bg-blue-50 hover:-translate-y-1 z-20"
           aria-label="Scroll to top"

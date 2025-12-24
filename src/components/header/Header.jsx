@@ -23,7 +23,7 @@ export default function Header() {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Process", path: "/process" },
-    { name: "Blog", path: "/blog" },
+    { name: "Blog", path: "/blogs" },
     { name: "Contact Us", path: "/contact" }, 
   ];
 
