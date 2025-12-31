@@ -16,6 +16,7 @@ import EcomService from "./servicesPages/EcomService";
 import SmartDineService from "./servicesPages/SmartDineService";
 import Blogs from "./pages/Blogs";
 import Process from "./pages/Process";
+import ITService from "./servicesPages/ITServices";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/erp" element={<ErpService/>}/>
           <Route path="/e-commerce-development" element={<EcomService/>}/>
           <Route path="/smart-dine" element={<SmartDineService/>}/>
+          <Route path="/it-services" element={<ITService/>}/>
         </Routes>
       </main>
 

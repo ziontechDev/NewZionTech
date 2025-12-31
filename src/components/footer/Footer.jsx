@@ -118,6 +118,14 @@ export default function Footer() {
                   Smart Dine
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/it-services"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Managed IT Services
+                </Link>
+              </li>
             </ul>
           </div>
 

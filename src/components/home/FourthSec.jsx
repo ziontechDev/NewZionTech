@@ -6,6 +6,7 @@ import {
   Globe,
   ShoppingCart,
   ArrowRight,
+  MonitorCog
 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ErpImg from "../../assets/services/erp.jpg";
@@ -13,6 +14,7 @@ import mobileImg from "../../assets/services/mobile.jpg";
 import webImg from "../../assets/services/web.jpg";
 import ecomImg from "../../assets/services/ecom.jpg";
 import dineImg from "../../assets/services/dine.jpg";
+import itImg from "../../assets/services/it.jpg";
 import { Link } from "react-router-dom";
 
 const FourthSec = () => {
@@ -63,6 +65,15 @@ const FourthSec = () => {
       icon: <ShoppingCart className="h-6 w-6 text-white" />,
       image: ecomImg,
       path:'/e-commerce-development'
+    },
+    {
+      id: 6,
+      title: "Managed IT Services",
+      description:
+        "Boost business efficiency with reliable and proactive managed IT services. Expert infrastructure management, robust cybersecurity, and 24/7 support.",
+      icon: <MonitorCog className="h-6 w-6 text-white" />,
+      image: itImg,
+      path:'/it-services'
     },
   ];
 

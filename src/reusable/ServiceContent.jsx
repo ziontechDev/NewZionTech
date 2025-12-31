@@ -17,6 +17,7 @@ const servicesList = [
     path: "/e-commerce-development",
   },
   { id: "smart-dine", name: "Smart Dine", path: "/smart-Dine" },
+  { id: "IT-services", name: "Managed IT Services", path: "/it-services" },
 ];
 
 const ServiceContent = ({
