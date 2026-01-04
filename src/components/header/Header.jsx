@@ -9,7 +9,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import companyLogo from "../../assets/logo.png";
+import companyLogo from "../../assets/logo2.jpeg";
 
 export default function Header() {
   const [open, setOpen] = useState(false);

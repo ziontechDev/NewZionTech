@@ -127,7 +127,7 @@ const BlogsList = () => {
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-heading mb-3 hover:text-secondary transition-colors cursor-pointer">
-                    <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
+                    <Link to={`/`}>{blog.title}</Link>
                   </h3>
 
                   {/* Description */}

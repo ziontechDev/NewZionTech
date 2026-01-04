@@ -8,7 +8,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa6";
 
-import companyLogo from "../../assets/logo.png";
+import companyLogo from "../../assets/logo.jpeg";
 
 export default function Footer() {
   // Function to scroll smoothly to the top

@@ -1,7 +1,8 @@
 import React from "react";
 import { ArrowRight, Check } from "lucide-react";
 import mainImage from "../../assets/team.jpg";
-import smallImage from "../../assets/logo.png";
+import smallImage from "../../assets/logo2.jpeg";
+import { Link } from "react-router-dom";
 
 const ThirdSec = () => {
   const points = [
@@ -88,6 +89,7 @@ const ThirdSec = () => {
             </ul>
 
             {/* === Animated Button === */}
+            <Link to="/about">
             <button className="group relative inline-flex items-center justify-between overflow-hidden border-2 border-secondary rounded-full bg-secondary py-1 pl-8 pr-1 text-white hover:text-primary transition-all duration-300 ease-in-out">
               {/* Button Text */}
               <span className="relative z-10 text-base font-bold tracking-wide">
@@ -102,6 +104,7 @@ const ThirdSec = () => {
               {/* The expanding background animation element */}
               <div className="absolute right-2 top-1/2 h-12 w-12 -translate-y-1/2 scale-0 rounded-full bg-white transition-transform duration-500 ease-out group-hover:scale-[30]"></div>
             </button>
+            </Link>
           </div>
         </div>
       </div>

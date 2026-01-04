@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import CtaBgImg from "../../assets/ctaBg.jpg"
+import { Link } from "react-router-dom";
 
 const HomeCallToAction = () => {
   
@@ -33,12 +34,14 @@ const HomeCallToAction = () => {
           </p>
 
           <div className="flex justify-center">
+            <Link to="/contact">
             <button className="group flex items-center gap-3 rounded-full bg-linear-to-r from-pink to-secondary px-8 py-4 text-base font-bold text-white transition-all  hover:shadow-lg hover:shadow-blue-500/30">
               Let's Work Together
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-secondary transition-transform group-hover:translate-x-1">
                 <ArrowRight size={14} />
               </span>
             </button>
+            </Link>
           </div>
         </div>
       </div>
