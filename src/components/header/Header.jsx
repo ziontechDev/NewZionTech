@@ -9,7 +9,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import companyLogo from "../../assets/logo2.jpeg";
+import companyLogo from "../../assets/logo3.png";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -104,11 +104,11 @@ export default function Header() {
         <div className="mx-auto px-4 sm:px-10">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-2">
               <img
                 src={companyLogo}
                 alt="Ziontech"
-                className="w-12 h-12 object-contain"
+                className="w-13 h-13 object-contain"
               />
               <div>
                 <div className="text-2xl font-bold text-primary">ZIONTECH</div>

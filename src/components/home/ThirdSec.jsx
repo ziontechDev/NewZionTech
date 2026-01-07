@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, Check } from "lucide-react";
 import mainImage from "../../assets/team.jpg";
-import smallImage from "../../assets/logo2.jpeg";
+import smallImage from "../../assets/logo3.png";
 import { Link } from "react-router-dom";
 
 const ThirdSec = () => {
@@ -34,7 +34,7 @@ const ThirdSec = () => {
           {/* === Left Column: Image Section === */}
           <div className="relative lg:w-1/2">
             {/* Floating small image circle */}
-            <div className="absolute -top-12 right-4 z-20 h-24 w-24 overflow-hidden rounded-full border-[6px] border-white shadow-lg md:-top-16 md:right-12 md:h-32 md:w-32">
+            <div className="absolute -top-12 right-4 z-20 h-24 w-24 p-2 overflow-hidden rounded-full border-[6px] bg-white border-white shadow-lg md:-top-16 md:right-12 md:h-32 md:w-32">
               <img
                 src={smallImage}
                 alt="IT Experts"
