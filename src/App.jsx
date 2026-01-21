@@ -17,6 +17,7 @@ import SmartDineService from "./servicesPages/SmartDineService";
 import Blogs from "./pages/Blogs";
 import Process from "./pages/Process";
 import ITService from "./servicesPages/ITServices";
+import Brochure from "./pages/Brochure";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/services" element={<Services/>}/>
           <Route path="/blogs" element={<Blogs/>}/>
           <Route path="/process" element={<Process/>}/>
+          <Route path="/brochure" element={<Brochure/>}/>
           <Route path="/contact" element={<Contact />} />
 
           {/* services pages */}

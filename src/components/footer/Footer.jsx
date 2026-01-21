@@ -175,6 +175,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  to="/brochure"
+                  className="footer-link hover:text-blue-300 transition-colors"
+                >
+                  Brochure
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/contact"
                   className="footer-link hover:text-blue-300 transition-colors"
                 >

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import {
   ShieldCheck,
   Phone,
@@ -24,7 +24,8 @@ export default function Header() {
     { name: "Services", path: "/services" },
     { name: "Process", path: "/process" },
     { name: "Blog", path: "/blogs" },
-    { name: "Contact Us", path: "/contact" }, 
+    { name: "Brochure", path: "/brochure" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   useEffect(() => {
@@ -228,7 +229,7 @@ export default function Header() {
 /* ================= CTA BUTTON ================= */
 function GetQuoteButton() {
   return (
-    <Link to="/contact" >
+    <Link to="/contact">
       <button className="relative overflow-hidden flex items-center gap-3 pl-1 py-1 pr-3 rounded-full bg-secondary text-white border-2 border-secondary group">
         <span className="relative z-10 flex items-center justify-center w-9 h-9 rounded-full">
           <span className="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-[20] transition-transform duration-500 ease-out" />
