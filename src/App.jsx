@@ -18,6 +18,7 @@ import Blogs from "./pages/Blogs";
 import Process from "./pages/Process";
 import ITService from "./servicesPages/ITServices";
 import Brochure from "./pages/Brochure";
+import Career from "./pages/Career";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/blogs" element={<Blogs/>}/>
           <Route path="/process" element={<Process/>}/>
           <Route path="/brochure" element={<Brochure/>}/>
+          <Route path="/career" element={<Career/>}/>
           <Route path="/contact" element={<Contact />} />
 
           {/* services pages */}

@@ -3,6 +3,7 @@ import PageBanner from "../reusable/PageBanner";
 import brochureBg from "../assets/brochureBanner.jpg";
 import brochurePdf from "../assets/brochure/companyBrochure.pdf";
 import { Download } from "lucide-react";
+import CallToAction from "../reusable/CallToAction";
 
 const Brochure = () => {
   return (
@@ -56,6 +57,7 @@ const Brochure = () => {
           </div>
         </div>
       </section>
+      <CallToAction/>
     </>
   );
 };
